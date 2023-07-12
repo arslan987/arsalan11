@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <script>
+        var pin = 00001;
+        var checkpin = prompt("Enter Pin");
+
+        if(checkpin == pin)
+        {
+            var choise = prompt("Enter 1 for With draw___ 2 for transfer ____3 for detail");
+            if(choise == 1)
+            {
+                
+                var withdraw = prompt("1:500   2:2000   3:5000  4:other");
+
+                if(withdraw == 1)
+                {
+                document.write("your withdraw  500");
+                }
+                else if(withdraw == 2)
+                {
+                document.write("your withdraw  2000");
+                }
+                else if(withdraw == 3)
+                {
+                document.write("your withdraw  5000");
+                }
+                else if(withdraw == 4)
+                {
+                    var otherAmount = prompt("Enter your amount");
+
+                    if(isNaN(otherAmount))
+                    {
+                        alert("yuo can enter only nmubers")
+                    }
+                    else if(otherAmount % 500 == 0)
+                    {
+                        document.write("your withdraw" + otherAmount)  
+                    }
+                    else
+                    {
+                        alert("Sorry This is not valid amount")
+                    }
+                }
+              
+            }
+            else if(choise == 2)
+            {
+                 var result = prompt("Enter Your Amount")
+                
+                document.write("transfer" + result + "successfully");
+            }
+            else if(choise == 3)
+            {
+                var seedetails = prompt("Enter Your phone number")
+                document.write("Check SMS in your phone number" + seedetails);
+            }
+            else
+            {
+                document.write("error");
+            }
+        }
+        else
+        {
+            alert("pin incorrect");
+        }
+    </script>
+</body>
+</html>
